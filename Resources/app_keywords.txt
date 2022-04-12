@@ -1,0 +1,12 @@
+*** Settings ***
+Resource          ../Libraries/librarymanager.txt
+Resource          Commonkeywords.txt
+
+*** Variables ***
+${url}            https://bbsitedemo.btbanking.com/onlineserv/CM/?D=5472
+${browser}        gc
+
+*** Keywords ***
+Openbb_app
+    Open Browser    ${url}    ${browser}
+    web_clickelement    landingpage    loginlink
