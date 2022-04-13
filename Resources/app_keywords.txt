@@ -3,10 +3,16 @@ Resource          ../Libraries/librarymanager.txt
 Resource          Commonkeywords.txt
 
 *** Variables ***
-${url}            https://bbsitedemo.btbanking.com/onlineserv/CM/?D=5472
-${browser}        gc
+${browser}        chrome
+${url}            https://opensource-demo.orangehrmlive.com
 
 *** Keywords ***
-Openbb_app
+Login
+    [Arguments]    ${username}    ${password}
     Open Browser    ${url}    ${browser}
-    web_clickelement    landingpage    loginlink
+    Maximize Browser Window
+    web_inputtext    landling    username    ${username}
+    web_inputtext    landling    password    ${password}
+    web_clickelement    landling    login_button
+    web_clickelement    loginpage    Admin
+    web_inputtext    Admin    username    Admin

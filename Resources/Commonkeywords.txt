@@ -41,9 +41,3 @@ GetLocatorDetails
     Set Test Variable    ${locator}    ${result}[0][2]
     Set Test Variable    ${beforewait}    ${result}[0][3]
     Set Test Variable    ${afterwait}    ${result}[0][4]
-
-web_clickelement1
-    [Arguments]    ${pagename}    ${fieldname}
-    GetLocatorDetails    ${pagename}    ${fieldname}
-    Wait Until Element Is Visible    ${locator}    ${beforewait}
-    Wait Until Keyword Succeeds    10    2    Click Element    ${locator}
