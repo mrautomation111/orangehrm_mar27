@@ -13,6 +13,3 @@ Login
     Maximize Browser Window
     web_inputtext    landling    username    ${username}
     web_inputtext    landling    password    ${password}
-    web_clickelement    landling    login_button
-    web_clickelement    loginpage    Admin
-    web_inputtext    Admin    username    Admin
